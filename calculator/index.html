@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"  class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/ady.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Calculator</title>
+</head>
+<body>
+    
+       <div class="drakbro">
+        <input class="pr" type="checkbox" name="dark-mode" id="theme" onclick="changecolor('#0062be')" >
+        <label for="theme"></label>
+            <span class="check"></span>
+        </div>
+         
+        
+        
+        
+    
+   
+    <div id="container">
+        <div id="calculator"  class="dark">
+            <div id="result">
+                <div id="history">
+                    <p id="history-value">2+3</p>
+                </div>
+                <div id="output">
+                    <p id="output_value">5</p>
+                </div>
+            </div>
+            <div id="keyboard">
+<button class="operator" id="clear" >C</button>
+<button class="operator" id="backspace">CE</button>
+<button class="operator" id="%">%</button>
+<button class="operator" id="/">&#247;</button>
+<button class="number" id="7">7</button>
+<button class="number" id="8">8</button>
+<button class="number" id="9">9</button>
+<button class="operator" id="*">&times;</button>
+<button class="number" id="4">4</button>
+<button class="number" id="5">5</button>
+<button class="number" id="7">6</button>
+<button class="operator" id="+">+</button>
+<button class="number" id="1">1</button>
+<button class="number" id="2">2</button>
+<button class="number" id="3">3</button>
+<button class="operator" id="-">-</button>
+<button class="empty" id="empty"></button>
+<button class="number" id="0">0</button>
+<button class="empty" id="empty"></button>
+<button class="operator"  id="=">=</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>function changecolor(color){
+    
+    const dark=document.querySelector('.dark');
+        dark.style.background=color;
+
+    
+      
+
+}
+
+    const checkbox=document.querySelector('.pr');
+    checkbox.addEventListener("change",({target}) =>{
+        target.checked ? changecolor('#000000'):changecolor('linear-gradient(hsla(0, 100%, 100%, 0.89),#002fffb6,#002fffb6)');
+    }    );
+</script>
+</html>
